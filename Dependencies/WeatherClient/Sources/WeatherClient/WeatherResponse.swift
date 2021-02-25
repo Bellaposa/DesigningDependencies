@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct WeatherResponse: Decodable, Equatable {
-	var consolidatedWeather: [ConsolidateWeather]
+public struct WeatherResponse: Decodable, Equatable {
+	public var consolidatedWeather: [ConsolidateWeather]
 
-	struct ConsolidateWeather: Decodable, Equatable {
-		var applicabileDate: String
-		var id: Int
-		var maxTemp: Double
-		var minTemp: Double
-		var theTemp: Double
+	public struct ConsolidateWeather: Decodable, Equatable {
+		public var applicabileDate: String
+		public var id: Int
+		public var maxTemp: Double
+		public var minTemp: Double
+		public var theTemp: Double
 
 		private enum CodingKeys: String, CodingKey {
 			case applicabileDate = "applicable_date",

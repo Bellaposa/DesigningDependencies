@@ -14,7 +14,6 @@
 		8988CC4C25E7B1F400A455FC /* DependenciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988CC4B25E7B1F400A455FC /* DependenciesTests.swift */; };
 		8988CC5725E7B1F400A455FC /* DependenciesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988CC5625E7B1F400A455FC /* DependenciesUITests.swift */; };
 		8988CC6825E7B23300A455FC /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988CC6725E7B23300A455FC /* AppViewModel.swift */; };
-		8988CC6D25E7B3DF00A455FC /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988CC6C25E7B3DF00A455FC /* WeatherResponse.swift */; };
 		89A3058525E7CF8A00C9CD75 /* WeatherClient in Frameworks */ = {isa = PBXBuildFile; productRef = 89A3058425E7CF8A00C9CD75 /* WeatherClient */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +48,6 @@
 		8988CC5625E7B1F400A455FC /* DependenciesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesUITests.swift; sourceTree = "<group>"; };
 		8988CC5825E7B1F400A455FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8988CC6725E7B23300A455FC /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
-		8988CC6C25E7B3DF00A455FC /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		89A3057F25E7CECC00C9CD75 /* WeatherClient */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeatherClient; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +108,6 @@
 				8988CC4225E7B1F300A455FC /* Info.plist */,
 				8988CC3F25E7B1F300A455FC /* Preview Content */,
 				8988CC6725E7B23300A455FC /* AppViewModel.swift */,
-				8988CC6C25E7B3DF00A455FC /* WeatherResponse.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -283,7 +280,6 @@
 				8988CC3C25E7B1F200A455FC /* ContentView.swift in Sources */,
 				8988CC3A25E7B1F200A455FC /* DependenciesApp.swift in Sources */,
 				8988CC6825E7B23300A455FC /* AppViewModel.swift in Sources */,
-				8988CC6D25E7B3DF00A455FC /* WeatherResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

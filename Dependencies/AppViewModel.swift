@@ -14,21 +14,17 @@ class AppViewModel: ObservableObject {
 	@Published var weatherResults: [WeatherResponse.ConsolidateWeather] = []
 	private var weatherRequestCancellable: AnyCancellable?
 
-	init(isConnected: Bool = true) {
+	init(
+		isConnected: Bool = true,
+		weatherClient: WeatherClient
+		) {
 		self.isConnected = isConnected
-
-		self.weatherRequestCancellable = URLSession.shared
-			.dataTaskPublisher(for: URL(string: "https://www.metaweather.com/api/location/719258")!)
-			.map { data, _ in data }
-			.decode(type: WeatherResponse.self, decoder: JSONDecoder())
-			.receive(on: DispatchQueue.main)
+		self.weatherRequestCancellable = weatherClient
+			.weather()
 			.sink(
-				receiveCompletion: {
-					print("Completion: ", $0)
-				},
-				receiveValue: { [weak self] in
-					print("receiveValue: ", $0)
-					self?.weatherResults = $0.consolidatedWeather
+				receiveCompletion: { _ in },
+				receiveValue: { [weak self] response in
+					self?.weatherResults = response.consolidatedWeather
 				}
 			)
 	}

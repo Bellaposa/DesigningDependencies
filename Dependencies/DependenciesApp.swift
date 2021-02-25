@@ -11,7 +11,13 @@ import SwiftUI
 struct DependenciesApp: App {
     var body: some Scene {
         WindowGroup {
-			ContentView(viewModel: AppViewModel())
+			ContentView(viewModel: AppViewModel( weatherClient: .failed))
         }
     }
+}
+
+struct DependenciesApp_Previews: PreviewProvider {
+	static var previews: some View {
+		ContentView(viewModel: AppViewModel(weatherClient: .happyPath))
+	}
 }
