@@ -5,8 +5,9 @@
 //  Created by Antonio Posabella on 25/02/21.
 //
 
-import Foundation
 import Combine
+import Foundation
+import WeatherClient
 
 class AppViewModel: ObservableObject {
 	@Published var isConnected = true
