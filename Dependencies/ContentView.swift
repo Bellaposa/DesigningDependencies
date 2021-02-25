@@ -15,7 +15,13 @@ struct ContentView: View {
 			ZStack(alignment: .bottom) {
 				ZStack(alignment: .bottomTrailing) {
 					List {
-						EmptyView()
+						ForEach(self.viewModel.weatherResults, id: \.id) { weather in
+							VStack(alignment: .leading) {
+								Text("Current temp: \(weather.theTemp, specifier: "%.1f")°C")
+								Text("Max temp: \(weather.maxTemp, specifier: "%.1f")°C")
+								Text("Min temp: \(weather.minTemp, specifier: "%.1f")°C")
+							}
+						}
 					}
 
 					Button(
@@ -47,7 +53,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		ContentView(viewModel: AppViewModel())
-    }
+	}
 }
