@@ -18,6 +18,6 @@ struct DependenciesApp: App {
 
 struct DependenciesApp_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView(viewModel: AppViewModel(weatherClient: .happyPath))
+		ContentView(viewModel: AppViewModel(weatherClient: .failed))
 	}
 }
